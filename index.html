@@ -17,13 +17,33 @@
     <body background="ping_pong_background.jpg">
         <center>
 
-        <h2 class="btn btn-primary header">AI PING PONG GAME<button class="btn btn-info instructions" data-toggle="modal" data-target="#myModal">Instructions</button></h2>
+        <h2 class="btn btn-primary header">AI PING PONG GAME
+            <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Instructions</button>
+        </h2>
         <br>
         <button onclick="startGame()" class="btn btn-danger">Play</button>
+        <br>
+        <button onclick="restart()" class="btn btn-warning">Restart</button>
         <br>
         <h3 class="btn btn-success" id="status"></h3>
 
         <div id="canvas_division"></div>
+
+        <div id="myModal" class="modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button class="close" data-dismiss="modal">&times</button>
+                  <h4>Instructions</h4>
+                </div>
+                <div class="modal-body">
+                  <p>Move your wrist to control the position of the paddle</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn btn-primary copyright_footer">Developed by: Harini</div>
 
     </center>
 
