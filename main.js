@@ -21,6 +21,9 @@ var ball = {
     dy:3
 }
 
+rightWristX=0;
+rightWristY=0;
+score_right_wrist=0;
 function setup(){
   var canvas =  createCanvas(700,600);
 	canvas.parent('canvas_division');
@@ -36,7 +39,31 @@ function modelLoaded()
 {
   console.log("model is loaded");
 }
+
+function gotResult( results)
+{
+  if(results.length>0)
+    {
+      console.log(results);
+      rightWristX=results[0].pose.rightWrist.x;
+      rightWristY=results[0].pose.rightWrist.y;
+      score_right_wrist=results[0].pose.rightWrist.score;
+      
+    }
+}
+
 function draw(){
+
+  if(score_right_wrist>=0.2)
+  {
+         fill("#f0e589");
+       stroke("#f0e589")
+       circle(rightWristX, rightWristY,20);
+    }
+  }
+
+
+
 
  background(0); 
 
